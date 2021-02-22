@@ -3,15 +3,28 @@
 [Go to App!](https://shortner-project.herokuapp.com/)
 
 ## Requirements/ Expected Functionality
+
+### Functional Requirments:
 The expected features and supported capabilities will be as follows:
 1. A user can supply a url that they want shortened, and then after submitting it they will receive a short url which includes the base url and the hash/short value.
 2. On a separate page a user can submit a url they want shortened and the hash/short value they want for it, if it is already taken, let the user know.
 3. A user should be able to hit one of the provided short urls and be redirected to the original url.
 
+### Non Functional Requirments:
+1. HA (High Availabiltiy) to ensure URL redirection shouldn't fail at any instance.
+2. Real time URL Redirection (No Latency)
+3. For multiple users accessing the same URL, they all should get the same URL. This will improve API Response Time and requires less storage in DB. [This requirment can be changed according to client since in some situations for multiple users, they might ask to give different short URLs for same long URL]
+
 ## Project Architecture:
 - As per above mentioned requirements, I have created 2 independent services for requirement point 1 and point 2.
 - "tinyURLapp" Folder contains the Django App for Requirement 1
 - "customURLapp" Folder contains the Django App for Requirement 2
+- Logic to create short URLs is present inside "tinyURLapp" folder
+
+#### Logic to create Short URLs:
+1. My Approach: Assign a unique id to a valid user provided long URL and encoded the id using base64 conversion to generate short/hash value for Short URL.
+2. Alternative Approach: We can use Hash Function like MD5 or SHA256 to generate a unique hash of user provided long URL. One problem with this approach is to deal with collisions.
+3. Naive Approach: Use "random" and "strings" to randomly generate a new short value and append it with base URL.
 
 #### Advantage of creating 2 independent applications as opposed to creating 1 single application: 
 1. You can use each application in any other project [Code Reusability achieved]
