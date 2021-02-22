@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['shortner-project.herokuapp.com', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'tinyURLapp.apps.TinyurlappConfig', ## 1
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
