@@ -21,5 +21,6 @@ The expected features and supported capabilities will be as follows:
 ## Tech Stack
 1. Python/Django
 2. PostgreSQL Database (AWS RDS Instance)
+3. HTML/Bootstrap 
 
 
