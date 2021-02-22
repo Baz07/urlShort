@@ -40,6 +40,7 @@ Since I have treated requirement 1 and 2 as an independent services, I have deve
 
 ## Database Schema
 
-For Requirment 1 [Tiny URL App]
+#### For Requirment 1 [Tiny URL App]
+
 ![db_schema1](db_schema1.JPG)
 
