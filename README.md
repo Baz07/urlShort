@@ -10,18 +10,19 @@ The expected features and supported capabilities will be as follows:
 
 ## Project Architecture:
 - As per above mentioned requirements, I have created 2 independent services for requirement point 1 and point 2.
-- TinyURLapp Folder contains the Django App for Requirement 1
-- CustomURLapp Folder contains the Django App for Requirement 2
-- Advantage: 
-1. Individual App Reusability for other projects
-2. Less complex debugging and Testing
-3. Flexible and Scalable (Each application can be scaled independently)  
+- "tinyURLapp" Folder contains the Django App for Requirement 1
+- "customURLapp" Folder contains the Django App for Requirement 2
+- Advantage of creating 2 independent applications as opposed to creating 1 single application: 
+1. You can use each application in any other project [Code Reusability achieved]
+2. Testing Application Code, Generate Code Coverage and Debug Code Issues is way less complex than performing all mentioned tasks in a single application
+3. Consistent, High Fault Tolerant and Scalable Design [Even if one application/service goes down, you can still use other service without any issue]   
 
 
 ## Tech Stack
 1. Python/Django
 2. PostgreSQL Database (AWS RDS Instance)
 3. HTML/Bootstrap
+4. AWS S3 bucket (For Static File Storage) --> In Progress
 
 
 ## How to use the project code? (Please make sure to install all dependencies from requirements.txt file before executing the project)
