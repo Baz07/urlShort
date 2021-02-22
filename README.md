@@ -13,7 +13,7 @@ The expected features and supported capabilities will be as follows:
 - "tinyURLapp" Folder contains the Django App for Requirement 1
 - "customURLapp" Folder contains the Django App for Requirement 2
 
-Advantage of creating 2 independent applications as opposed to creating 1 single application: 
+#### Advantage of creating 2 independent applications as opposed to creating 1 single application: 
 1. You can use each application in any other project [Code Reusability achieved]
 2. Testing Application Code, Generate Code Coverage and Debug Code Issues is way less complex than performing all mentioned tasks in a single application
 3. Consistent, High Fault Tolerant and Scalable Design [Even if one application/service goes down, you can still use other service without any issue]   
