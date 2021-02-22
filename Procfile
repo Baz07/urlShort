@@ -1,0 +1,1 @@
+web: gunicorn tinyURL_project.wsgi --log-file -
