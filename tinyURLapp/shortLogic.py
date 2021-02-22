@@ -15,6 +15,7 @@ class Shortner:
         
         return str(short_url)
     
+    ## Base 10 to Base 64 Conversion Logic
     def tokenGenerator(self, id):
         token = []
         base64_chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"

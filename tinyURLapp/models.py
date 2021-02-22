@@ -1,5 +1,6 @@
 from django.db import models
 
+## Model for TinyURLapp
 class short_url(models.Model):
     long_url = models.URLField('URL', max_length=1000)
     short_url = models.CharField(max_length=20)

@@ -5,6 +5,13 @@ from .models import short_url
 from .forms import URLForm
 from .shortLogic import Shortner
 
+
+####################
+## Tiny URL Views###
+####################
+
+
+## Initialize Shortner Object so that each request id will be incremented by 1
 Shortner_obj = Shortner()
 
 ## Home Page
