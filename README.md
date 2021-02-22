@@ -1,5 +1,7 @@
 # URL Shortner (Deployed on Heroku)
 
+[Go to App!](https://shortner-project.herokuapp.com/)
+
 ## Requirements/ Expected Functionality
 The expected features and supported capabilities will be as follows:
 1. A user can supply a url that they want shortened, and then after submitting it they will receive a short url which includes the base url and the hash/short value.
