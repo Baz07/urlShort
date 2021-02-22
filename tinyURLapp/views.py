@@ -40,8 +40,12 @@ def home(request):
 
 ## Redirect Page (i.e. to Original URL Page)
 def divert(request, hash_value):
-    url_obj = short_url.objects.filter(short_url=hash_value)[0]  ## Note: I prefer using '.filter' instead of get_object_or_404 because of the way DB Schema is designed.
-    return redirect(url_obj.long_url) 
+    url_obj = short_url.objects.filter(short_url=hash_value)  ## Note: I prefer using '.filter' instead of get_object_or_404 because of the way DB Schema is designed.
+    if url_obj:
+        url_obj = url_obj[0]
+        return redirect(url_obj.long_url)
+    else:
+        return render(request, 'tinyURLapp/404.html')
 
 
 
