@@ -31,7 +31,8 @@ ALLOWED_HOSTS = ['shortner-project.herokuapp.com', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'tinyURLapp.apps.TinyurlappConfig', ## 1
+    'tinyURLapp.apps.TinyurlappConfig', ## Register tinyURLapp
+    'customURLapp.apps.CustomurlappConfig', ## Register customURLapp
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',

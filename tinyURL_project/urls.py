@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('tinyURLapp.urls'))
+    path('', include('tinyURLapp.urls')), ## Include all API's for TinyURLapp
+    path('custom/', include('customURLapp.urls')) ## Include all API's for CustomURLURLapp
 ]
