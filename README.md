@@ -24,6 +24,7 @@ The expected features and supported capabilities will be as follows:
 2. PostgreSQL Database (AWS RDS Instance)
 3. HTML/Bootstrap
 4. AWS S3 bucket (For Static File Storage) --> In Progress
+5. Redis Caching System for Requirement 1 --> In Progress
 
 
 ## How to use the project code? (Please make sure to install all dependencies from requirements.txt file before executing the project)
