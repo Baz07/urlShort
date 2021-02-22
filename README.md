@@ -38,3 +38,8 @@ The expected features and supported capabilities will be as follows:
 ## Git Branch Information
 Since I have treated requirement 1 and 2 as an independent services, I have developed requirment 1 via branch 1.0.0 and requirement 2 via branch 2.0.0 to handle major/minor feature enhancement and bug fixes.
 
+## Database Schema
+
+For Requirment 1 [Tiny URL App]
+![db_schema1](db_schema1.jpg)
+
