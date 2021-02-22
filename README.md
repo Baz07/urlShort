@@ -1,4 +1,4 @@
-# URL Shortner
+# URL Shortner (Deployed on Heroku)
 
 ## Requirements/ Expected Functionality
 The expected features and supported capabilities will be as follows:
