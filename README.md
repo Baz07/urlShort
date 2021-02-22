@@ -44,3 +44,8 @@ Since I have treated requirement 1 and 2 as an independent services, I have deve
 
 ![db_schema1](db_schema1.JPG)
 
+
+#### For Requirment 2 [Custom URL App]
+
+![db_schema2](db_schema2.JPG)
+
