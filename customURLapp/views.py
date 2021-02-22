@@ -32,5 +32,9 @@ def customurl_home(request):
 
 ## For Redirecting the short custom URL to Original URL
 def redirect_url(request, hash_value):
-    url_obj = get_object_or_404(custom_url, hash_value=hash_value)
-    return redirect(url_obj.original_url)
+    url_obj = custom_url.objects.filter(hash_value=hash_value)
+    if url_obj:
+        url_obj = url_obj[0]
+        return redirect(url_obj.original_url)
+    else:
+        return render(request, 'customURLapp/404.html')
