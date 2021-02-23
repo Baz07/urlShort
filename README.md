@@ -25,6 +25,7 @@ The expected features and supported capabilities will be as follows:
 1. My Approach: Assign a unique id to a valid user provided long URL and encoded the id using base64 conversion to generate short/hash value for Short URL.
 2. Alternative Approach: We can use Hash Function like MD5 or SHA256 to generate a unique hash of user provided long URL. One problem with this approach is to deal with collisions.
 3. Naive Approach: Use "random" and "strings" to randomly generate a new short value and append it with base URL.
+4. Use "KGS (Key Generation Service)" which will precompute a random short string and store it in the Database. For each request, KGS will send a unique short string. Advantage would be no need to encode or deal with collisions however this could be a single point of failure in the system.
 
 #### Advantage of creating 2 independent applications as opposed to creating 1 single application: 
 1. You can use each application in any other project [Code Reusability achieved]
@@ -61,4 +62,9 @@ Since I have treated requirement 1 and 2 as an independent services, I have deve
 #### For Requirment 2 [Custom URL App]
 
 ![db_schema2](db_schema2.JPG)
+
+## Further Improvements
+1. Implement Data Parititoning (Ex: hash based paritioning) in case application is handling million/billion requests per sec/min.
+2. Implement Load Balancers throughout the design
+3. Database Cleaning/Purging (Include a expiration time with each short URL)   
 
