@@ -22,8 +22,8 @@ The expected features and supported capabilities will be as follows:
 - Logic to create short URLs is present inside "tinyURLapp" folder
 
 #### Logic to create Short URLs:
-1. My Approach: Assign a unique id to a valid user provided long URL (i.e. use a Hash Map/Table) and encoded the id using base64 conversion to generate short/hash value for Short URL.
-2. Alternative Approach: We can use Hash Function like Digest or MD5 or SHA256 Algorithm to generate a unique hash of user provided long URL. One problem with this approach is to deal with collisions.
+1. Assign a unique id to a valid user provided long URL (i.e. use a Hash Map/Table) and encoded the id using base64 conversion to generate short/hash value for Short URL.
+2. **My Approach**: We can use Hash Function like Digest or MD5 or SHA256 Algorithm to generate a unique hash of user provided long URL. 
 3. Naive Approach: Use "random" and "strings" to randomly generate a new short value and append it with base URL.
 4. Use "KGS (Key Generation Service)" which will precompute a random short string and store it in the Database. For each request, KGS will send a unique short string. Advantage would be no need to encode or deal with collisions however this could be a single point of failure in the system.
 
