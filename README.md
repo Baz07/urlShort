@@ -21,13 +21,13 @@ The expected features and supported capabilities will be as follows:
 - "customURLapp" Folder contains the Django App for Requirement 2
 - Logic to create short URLs is present inside "tinyURLapp" folder
 
-#### Logic to create Short URLs:
+#### *Logic to create Short URLs:*
 1. Assign a unique id to a valid user provided long URL (i.e. use a Hash Map/Table) and encoded the id using base64 conversion to generate short/hash value for Short URL.
 2. **My Approach**: We can use Hash Function like Digest or MD5 or SHA256 Algorithm to generate a unique hash of user provided long URL. 
 3. Naive Approach: Use "random" and "strings" to randomly generate a new short value and append it with base URL.
 4. Use "KGS (Key Generation Service)" which will precompute a random short string and store it in the Database. For each request, KGS will send a unique short string. Advantage would be no need to encode or deal with collisions however this could be a single point of failure in the system.
 
-#### Advantage of creating 2 independent applications as opposed to creating 1 single application: 
+#### *Advantage of creating 2 independent applications as opposed to creating 1 single application:* 
 1. You can use each application in any other project [Code Reusability achieved]
 2. Testing Application Code, Generate Code Coverage and Debug Code Issues is way less complex than performing all mentioned tasks in a single application
 3. Consistent, High Fault Tolerant and Scalable Design [Even if one application/service goes down, you can still use other service without any issue]   
