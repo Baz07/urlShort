@@ -67,4 +67,5 @@ Since I have treated requirement 1 and 2 as an independent services, I have deve
 1. Implement Data Parititoning (Ex: hash based paritioning) in case application is handling million/billion requests per sec/min.
 2. Implement Load Balancers throughout the design
 3. Database Cleaning/Purging (Include a expiration time with each short URL)   
+4. Allow a group of users to access a particular URL (Include permission tag along with URL)
 
