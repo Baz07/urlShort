@@ -42,12 +42,14 @@ The expected features and supported capabilities will be as follows:
 
 
 ## How to use the project code? (Please make sure to install all dependencies from requirements.txt file before executing the project)
-1. Create a Folder locally on your desktop machine.
+1. Create a Folder locally on your desktop machine. (Recommended: Set up a virtual env)
 2. Initialize git inside the folder using 'git init'
 3. From Inside the folder, run "git clone <HTTP or SSL git link>" to clone the repo locally in your desktop
-4. Move inside folder 'urlShort' and run "python manage.py runserver" to execute the application locally.
-5. To run Test Cases, run 'python manage.py test <App Name>' [Ex: python manage.py test tinyURLapp]
-6. For Coverage Testing, run 'coverage run manage.py test <App Name>' and 'coverage html' to check the coverage of each module.
+4. Run "pip install -r requirements.txt" to install the dependencies
+5. Move inside folder 'urlShort' and run "python manage.py makemigrations" and then "python manage.py migrate" for DB Migrations
+6. Move inside folder 'urlShort' and run "python manage.py runserver" to execute the application locally.
+7. To run Test Cases, run 'python manage.py test <App Name>' [Ex: python manage.py test tinyURLapp]
+8. For Coverage Testing, run 'coverage run manage.py test <App Name>' and 'coverage html' to check the coverage of each module.
 
 ## Git Branch Information
 Since I have treated requirement 1 and 2 as an independent services, I have developed requirment 1 via branch 1.0.0 and requirement 2 via branch 2.0.0 to handle major/minor feature enhancement and bug fixes.
