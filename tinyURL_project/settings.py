@@ -75,27 +75,16 @@ TEMPLATES = [
 WSGI_APPLICATION = 'tinyURL_project.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
+Database
+https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydb_aws_1',
-        'USER': 'akshay07',
-        'PASSWORD': 'Marvel123#',
-        'HOST': 'database-1.cqexzm8r2vjp.us-east-2.rds.amazonaws.com',
-        'PORT': '5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 
 # import dj_database_url
 # db_from_env = dj_database_url.config(conn_max_age=600)
